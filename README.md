@@ -57,6 +57,17 @@ dsh plugin --profile <你的profile> add dsh-pipem
 > "fully quit it before running"——**那句话是误导**，它只是找不到 profile。
 > 详见 [AGENTS.md](./AGENTS.md) 里的调用方式。
 
+### 缺 bash 或想要 PowerShell 7？
+
+**这个插件不打包 Git 和 PowerShell**，但可以让你的 AI 自己装。
+
+把这句话丢给它：
+
+> 读 `node_modules/dsh-pipem/SETUP.md`，按里面的步骤装 Git 和 PowerShell 7。
+
+那份文档写了实测过的坑：镜像地址、静默安装参数、为什么装完 bash 会丢 pwsh、
+为什么改了 PATH 还要重启。
+
 装完在工具表里确认有 13 个工具（4 个 pipem_ + 9 个 heart_）。
 
 ---

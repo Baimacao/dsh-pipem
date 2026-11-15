@@ -17,6 +17,20 @@
 
 ---
 
+## 第一步半：缺 bash 或 pwsh 就装
+
+读同目录的 [SETUP.md](./SETUP.md)。里面是实测步骤 + 踩过的坑：
+
+- GitHub 直连会卡死，**先试清华镜像**
+- 镜像路径规则不统一（Git 用 `LatestRelease`，PowerShell 也要，但版本号目录会 404）
+- **下完必须校验**：文件大小 + `head -c2` 看是不是 `MZ`
+- `dsh-gitbash-shell` 默认藏 pwsh 工具，要 patch 里写 `pwshTool: true`
+- **改了 PATH 必须重启 DSH**——解析结果缓存在进程里
+
+装完记得跑自检清单。
+
+---
+
 ## 第二步：往你自己的 AGENTS.md 里加这几条
 
 下面是从实战里提炼的，**按重要性排**。不要整段抄，挑你用得上的。

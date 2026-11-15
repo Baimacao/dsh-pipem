@@ -1,0 +1,4 @@
+# dsh-pipem：宿主层挂一行。只给主智能体装工具，子智能体不装。
+- insert:
+    - id: dsh-pipem
+      name: dsh-pipem

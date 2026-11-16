@@ -18,6 +18,20 @@
 
 ---
 
+## 它替代了什么
+
+| 原来的插件 | 现在 |
+|---|---|
+| `dsh-ops` | bash 工具 + 记账 |
+| `dsh-scar` | 记账（改名哌甲酯） |
+| `dsh-heart` | 心（宪章 + 心事本，数据不变） |
+| `dsh-gitbash-shell` | bash 工具（搬了核心 8 文件 92KB） |
+
+**只保留了核心。** gitbash-shell 那 902KB 里的设置页 UI、sidebar 终端接管、
+winget 工具链、预设变体、ops-adopt 全都没搬。
+
+---
+
 ## 三个核心机制
 
 ### ① 记账：动手前查，报完成前绑证据
@@ -46,29 +60,27 @@ pipem_stats   哪类错最多、哪条 guard 反复出现
 ## 安装
 
 ```bash
-# 需要先有可用的 bash 或 pwsh 工具。推荐配 dsh-gitbash-shell：
-dsh plugin --profile <你的profile> add dsh-gitbash-shell
-
-# 再装这个
 dsh plugin --profile <你的profile> add dsh-pipem
 ```
+
+**一个插件全包**：bash 工具、记账、心。不需要额外装 dsh-gitbash-shell / dsh-heart / dsh-scar / dsh-ops。
 
 > DSH 正在运行时也能装，会热加载。关键是 `DSH_HOME` 要对，否则会报
 > "fully quit it before running"——**那句话是误导**，它只是找不到 profile。
 > 详见 [AGENTS.md](./AGENTS.md) 里的调用方式。
 
-### 缺 bash 或想要 PowerShell 7？
+### 需要先装 Git，PowerShell 7 可选
 
-**这个插件不打包 Git 和 PowerShell**，但可以让你的 AI 自己装。
+**bash 工具由本插件提供，但它需要系统里真有 Git for Windows**（不打包，因为 380MB）。
 
-把这句话丢给它：
+装好后工具表里应该有 13 个：4 个 `pipem_*` + 9 个 `heart_*`，加上 `bash`。
+
+缺 Git 就让你的 AI 自己装：
 
 > 读 `node_modules/dsh-pipem/SETUP.md`，按里面的步骤装 Git 和 PowerShell 7。
 
-那份文档写了实测过的坑：镜像地址、静默安装参数、为什么装完 bash 会丢 pwsh、
-为什么改了 PATH 还要重启。
-
-装完在工具表里确认有 13 个工具（4 个 pipem_ + 9 个 heart_）。
+那份文档是实测的，坑都写进去了：镜像地址、静默安装参数、
+为什么 PowerShell 的镜像路径规则和 Git 不一样、为什么改了 PATH 还要重启。
 
 ---
 

@@ -20,7 +20,8 @@
   "peerDependencies": {
     "@deepseek-ai/dsh-home-paths": ">=0.2.1-rc.1 <0.3.0-0",
     "@deepseek-ai/dsh-tools": ">=0.2.1-rc.1 <0.3.0-0",
-    "@deepseek-ai/schemastery": "^3.18.4"
+    "@deepseek-ai/schemastery": "^3.18.4",
+    "@deepseek-ai/dsh-bash-sandbox": ">=0.0.1-rc.1"
   },
   "files": [
     "lib",

@@ -1,7 +1,7 @@
 {
   "name": "dsh-pipem",
   "version": "0.1.0",
-  "description": "哌甲酯（dsh-pipem）：DSH 插件。把犯过的错记成可检索的 guard，动手前查、报完成前绑证据；出错自动提醒；内置一颗心（宪章 + 心事本）。与 dsh-gitbash-shell 配套可完全替代 dsh-ops。",
+  "description": "哌甲酯（dsh-pipem）：DSH 插件。把犯过的错记成可检索的 guard，动手前查、报完成前绑证据；工具失败时自动提醒；长上下文下检测复读；内置 bash 工具与一颗心（宪章 + 心事本）。可替代 dsh-ops、dsh-scar、dsh-heart、dsh-gitbash-shell。",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
